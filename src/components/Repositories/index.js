@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import api from '../../services/api';
+import './styles.css';
 
 function Repositories({ user }) {
 
@@ -18,7 +19,7 @@ function Repositories({ user }) {
     },[user]);
 
     return (
-        <ul>
+        <ul className="repo-list">
             {
                 repos.map((repo,index) => (
                     <li key={index}>
