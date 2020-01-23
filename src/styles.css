@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background: #00BFFF;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    width: 400px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 80px auto;
+}
+
+.userInput label {
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 3px;
+}
+
+form input {
+    padding: 3px;
+}
+
+form button {
+    border: 0;
+    margin-top: 20px;
+    margin-left: 25px;
+    padding: 12px;
+    border-radius: 3px;
+    background: #00BFFF;
+    color: #fff;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+form button:hover {
+    background: #fff;
+    color: #00BFFF;
+}
+
+.info {
+    max-width: 500px;
+    height: 120px;
+    background: #fff;
+    margin: 0 auto 10px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.info img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 3px 15px;
+    float: left;
+}
+
+.info h3 {
+    font-size: 25px;
+    display: inline;
+}
+
+.info span {
+    margin-left: 10px;
+    font-style: italic;
+    color: grey;
+}
+
+.info p {
+    margin: 3px;
+}
+
+.info a {
+    color: navy;
+    text-decoration: none;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
