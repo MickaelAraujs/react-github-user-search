@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link }  from 'react-router-dom';
 
 import './styles.css';
 
-function Card({ item }) {
+function Card({ item, index }) {
     return (
         <li>
             <div className="info">
@@ -10,7 +11,7 @@ function Card({ item }) {
                 <h3>{item.name}</h3>
                 <span>{item.login}</span>
                 <p>{item.bio}</p>
-                <a href={item.repos_url}>ver repositórios</a>
+                <Link to={`/repos/${index}`}>Ver Repositórios</Link>
             </div>
         </li>
     );
