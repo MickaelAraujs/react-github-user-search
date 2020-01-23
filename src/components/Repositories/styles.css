@@ -42,3 +42,21 @@
     background: #00BFFF;
     color: #fff;
 }
+
+.home-button {
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 15px;
+    background: #fff;
+    position: absolute;
+    top: 25px;
+    left: 100px;   
+}
+
+.home-button:hover {
+   background: #F8F8FF;
+}
+
+.home-button::before {
+    content: url('./assests/baseline_home_black_18dp.png');
+}

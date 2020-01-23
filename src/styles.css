@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     background: #00BFFF;
+    scroll-behavior: smooth;
 }
 
 #root {

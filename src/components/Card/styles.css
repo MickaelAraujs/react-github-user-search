@@ -31,8 +31,9 @@
 }
 
 .info a {
-    color: navy;
+    color: #00BFFF;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .info a:hover {
