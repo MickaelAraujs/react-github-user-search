@@ -9,7 +9,7 @@ function Routes() {
         <BrowserRouter>
             <Switch>
                 <Route exact path='/' component={Main} />
-                <Route path='/repos/:id' component={Repositories} />
+                <Route path='/repos/:id' render={(props) => <Repositories user={props.match.params.id} />} />
             </Switch>
         </BrowserRouter>
     )

@@ -28,7 +28,7 @@ function Main() {
     return (
         <>
             <Form onSubmit={loadUsers} />
-            <ul>
+            <ul className="info-list">
                 {
                 users.map((item,index) => {
                     return (

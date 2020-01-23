@@ -10,7 +10,7 @@ function Form({ onSubmit }) {
         e.preventDefault();
     
         setUser('');
-
+        
         onSubmit(user);
 
     }
