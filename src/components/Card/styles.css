@@ -1,0 +1,40 @@
+.info {
+    max-width: 500px;
+    height: 120px;
+    background: #fff;
+    margin: 0 auto 10px auto;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.info img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 3px 15px;
+    float: left;
+}
+
+.info h3 {
+    font-size: 25px;
+    display: inline;
+}
+
+.info span {
+    margin-left: 10px;
+    font-style: italic;
+    color: grey;
+}
+
+.info p {
+    margin: 3px;
+}
+
+.info a {
+    color: navy;
+    text-decoration: none;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
