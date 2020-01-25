@@ -21,7 +21,7 @@ function Main() {
         avatar_url,
         name,
         bio,
-        repos_url
+        repos_url,
         }]);
     }
 

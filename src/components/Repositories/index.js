@@ -10,20 +10,29 @@ function Repositories({ user }) {
     const [ repos, setRepos ] = useState([]);
     const [ page, setPage ] = useState(1);
     const [lastPage, setLastPage] = useState(false);
+    const [totalRepos, setTotalRepos] = useState(0);
+
+
+    useEffect(() => {
+        async function getNumberOfRepos() {
+            const response = await api.get(`/${user}`);
+    
+            const { public_repos } = response.data;
+    
+            setTotalRepos(public_repos);
+        }
+
+        getNumberOfRepos();
+    },[user]);
 
     useEffect(() => {
 
         async function loadRepos(page = 1) {
 
             const response = await api.get(`${user}/repos?page=${page}`);
-            
-            if (response.data.length === 0) {
-                setLastPage(true);
-                return;
-            }
 
             setRepos(response.data);
-        
+
         }
 
         loadRepos(page);
@@ -40,10 +49,22 @@ function Repositories({ user }) {
 
     function nextPage() {
 
-        if(page === 4) return;
+        const pages = totalPages();
+
+        if(page === pages) {
+            setLastPage(true);
+            return;
+        }
 
         setPage(page + 1); 
 
+    }
+
+    const totalPages = () => {
+
+        const reposPerPage = totalRepos / 30;
+        
+        return Math.ceil(reposPerPage);
     }
 
     return (

@@ -47,7 +47,7 @@
     padding: 10px;
     border-radius: 15px;
     background: #fff;
-    position: absolute;
+    position: fixed;
     left: 100px;   
 }
 
