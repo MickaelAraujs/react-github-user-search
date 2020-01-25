@@ -8,17 +8,43 @@ import './styles.css';
 function Repositories({ user }) {
 
     const [ repos, setRepos ] = useState([]);
+    const [ page, setPage ] = useState(1);
+    const [lastPage, setLastPage] = useState(false);
 
     useEffect(() => {
-        async function loadRepos() {
 
-            const response = await api.get(`${user}/repos`);
+        async function loadRepos(page = 1) {
+
+            const response = await api.get(`${user}/repos?page=${page}`);
             
+            if (response.data.length === 0) {
+                setLastPage(true);
+                return;
+            }
+
             setRepos(response.data);
+        
         }
 
-        loadRepos();
-    },[user]);
+        loadRepos(page);
+
+    },[user, page]);
+
+    function prevPage() {
+
+        if(page === 1) return;
+
+        setPage(page - 1);
+
+    }
+
+    function nextPage() {
+
+        if(page === 4) return;
+
+        setPage(page + 1); 
+
+    }
 
     return (
         <>
@@ -34,6 +60,8 @@ function Repositories({ user }) {
                 }
             </ul>
             <Link className="home-button" to="/"> </Link>
+            <button disabled={page === 1} className="page-button" id="prev" onClick={prevPage}> </button>
+            <button disabled={lastPage === true} className="page-button" id="next" onClick={nextPage}> </button>
         </>
     )
 }

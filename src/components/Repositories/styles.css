@@ -43,20 +43,49 @@
     color: #fff;
 }
 
-.home-button {
-    border: 1px solid #fff;
+.home-button, .page-button {
     padding: 10px;
     border-radius: 15px;
     background: #fff;
     position: absolute;
-    top: 25px;
     left: 100px;   
 }
 
-.home-button:hover {
+.home-button {
+    border: 1px solid #fff;
+    top: 50px;
+}
+
+.home-button, .page-button:hover {
    background: #F8F8FF;
 }
 
 .home-button::before {
     content: url('./assests/baseline_home_black_18dp.png');
+}
+
+.page-button {
+    border: 0;
+    cursor: pointer;
+}
+
+.page-button[disabled] {
+    opacity: 0.5;
+    background: #fff;
+}
+
+#prev {
+    top: 150px;
+}
+
+#next {
+    top: 250px;
+}
+
+#prev::before {
+    content: url('./assests/baseline_keyboard_arrow_left_black_18dp.png');
+}
+
+#next::before {
+    content: url('./assests/baseline_keyboard_arrow_right_black_18dp.png');
 }
